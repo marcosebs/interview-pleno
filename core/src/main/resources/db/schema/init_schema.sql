@@ -11,4 +11,4 @@ GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA interview_service TO brainweb;
 
 SET SCHEMA 'interview_service';
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
-GRANT EXECUTE ON FUNCTION uuid_generate_v4() TO brainweb;
+ALTER EXTENSION "uuid-ossp" SET SCHEMA interview_service;

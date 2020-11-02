@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "64b0c735-8131-48a0-b6d0-76dcef82e5f6",
+		"name": "HeroCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Criar Hero",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImNlc2FyLmdyYW5lbGxpLmRldkBnbWFpbC5jb20iLCJyb2xlIjoiUk9MRV9QUk9GSVNTSU9OQUwiLCJ0aW1lIjp7ImRhdGUiOiIyMDIwLTA3LTA1IDE3OjI5OjUwLjQxMzE3NyIsInRpbWV6b25lX3R5cGUiOjMsInRpbWV6b25lIjoiQW1lcmljYVwvU2FvX1BhdWxvIn19.GK-MxztrKPQPU5x8aW-e0SCgS9SNvKBl_RpD7odoQQ4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Heroi B\",\r\n    \"race\": \"ALIEN\", \r\n    \"power_stats\": {\r\n        \"strength\": 10, \r\n        \"agility\": 4, \r\n        \"dexterity\": 3, \r\n        \"intelligence\": 9\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/heroes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"heroes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Hero por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/heroes/0ecde479-eae0-4cf8-a700-a73e8eb0b18d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"heroes",
+						"0ecde479-eae0-4cf8-a700-a73e8eb0b18d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Hero por NAME",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/heroes?name=marcos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"heroes"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "marcos"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Hero",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImNlc2FyLmdyYW5lbGxpLmRldkBnbWFpbC5jb20iLCJyb2xlIjoiUk9MRV9QUk9GSVNTSU9OQUwiLCJ0aW1lIjp7ImRhdGUiOiIyMDIwLTA3LTA1IDE3OjI5OjUwLjQxMzE3NyIsInRpbWV6b25lX3R5cGUiOjMsInRpbWV6b25lIjoiQW1lcmljYVwvU2FvX1BhdWxvIn19.GK-MxztrKPQPU5x8aW-e0SCgS9SNvKBl_RpD7odoQQ4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Etevalder\",\r\n    \"race\": \"ALIEN\", \r\n    \"power_stats\": {\r\n        \"strength\": 10, \r\n        \"agility\": 9, \r\n        \"dexterity\": 10, \r\n        \"intelligence\": 10\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/heroes/0ecde479-eae0-4cf8-a700-a73e8eb0b18d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"heroes",
+						"0ecde479-eae0-4cf8-a700-a73e8eb0b18d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comparar Atributos de Heros por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/heroes/compare/3ded4785-e57a-4343-835a-c12578fe0687/06aa2d00-f729-4652-ab2c-3be42f0f97bc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"heroes",
+						"compare",
+						"3ded4785-e57a-4343-835a-c12578fe0687",
+						"06aa2d00-f729-4652-ab2c-3be42f0f97bc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Hero",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImNlc2FyLmdyYW5lbGxpLmRldkBnbWFpbC5jb20iLCJyb2xlIjoiUk9MRV9QUk9GSVNTSU9OQUwiLCJ0aW1lIjp7ImRhdGUiOiIyMDIwLTA3LTA1IDE3OjI5OjUwLjQxMzE3NyIsInRpbWV6b25lX3R5cGUiOjMsInRpbWV6b25lIjoiQW1lcmljYVwvU2FvX1BhdWxvIn19.GK-MxztrKPQPU5x8aW-e0SCgS9SNvKBl_RpD7odoQQ4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/heroes/0ecde479-eae0-4cf8-a700-a73e8eb0b18d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"heroes",
+						"0ecde479-eae0-4cf8-a700-a73e8eb0b18d"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
